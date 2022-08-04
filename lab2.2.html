@@ -7,45 +7,63 @@
     <title>Lab2.2 form</title>
 </head>
 <body>
-    <h2>เเบบฟอร์มจองทัวร์</h2>
+    <style>
+        body{
+            margin:0 auto;
+            width:800px;
+        }
+    </style>
 
     <fieldset>
-        <legend>ข้อมูลทั่วไป<</legend>
-        <label for="ชื่อ-สกุล">ชื่อ-สกุล</label><br>
-        <input type="text" name="ชื่อ-สกุล" placeholder="กรอกชื่อ-สกุล"><br>
+        <h2>เเบบฟอร์มจองทัวร์</h2>
+        <fieldset >
+            <legend>ข้อมูลทั่วไป<</legend>
+            <label for="ชื่อ-สกุล">ชื่อ-สกุล</label><br>
+            <input type="text" name="ชื่อ-สกุล" placeholder="กรอกชื่อ-สกุล" required><br>
+    
+            <label for="Email">Email:</label><br>
+            <input type="text" name="Email:" required><br>
+    
+            <label for="โทรศัพท์">โทรศัพท์:</label><br>
+            <input type="tel" name="เบอร์โทรศัพท์" required><br>
+    
+            <label for="ที่อยู่">ที่อยู่:</label><br>
+            <textarea name="ที่อยู่:" id="" cols="30" rows="5" required></textarea><br>
+    
+            <label for="รหัสไปรณษีย์">รหัสไปรณษีย์:</label>
+            <input type="text" name="รหัสไปรณษีย์" size="5" maxlength="5" required><br>
+            
+            <label for="รูปผู้จอง">รูปผู้จอง:</label>
+            <input type="file" name="รูปผู้จอง" required>
+        </fieldset><br>
+    
+        <fieldset>
+            <legend>ข้อมูลผู้เข้าสู่ระบบ</legend>
+            <label for="Username">Username:</label><br>
+            <input type="text" 
+                    name="Username" 
+                    pattern="[A-Za-z0-9_]*8"><br>
+            <i>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ตั้งเเต่ 8 ตัวขึ้นไป</i><br><br>      
+    
+            
+            <label for="Password">Password:</label><br>
+            <input type="text" pattern="*8"><br>
+            <i>ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i>
+    
+         </fieldset><br>
+    
+         <fieldset>
+            <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+         </fieldset>
 
-        <label for="Email">Email:</label><br>
-        <input type="text" name="Email:" ><br>
+    </fieldset>
 
-        <label for="โทรศัพท์">โทรศัพท์:</label><br>
-        <input type="tel" ><br>
+    
+    
 
-        <label for="ที่อยู่">ที่อยู่:</label><br>
-        <textarea name="ที่อยู่:" id="" cols="30" rows="5"></textarea><br>
+    
 
-        <label for="รหัสไปรณษีย์">รหัสไปรณษีย์:</label>
-        <input type="text" name="รหัสไปรณษีย์" size="5" maxlength="5"><br>
-        
-        <label for="รูปผู้จอง">รูปผู้จอง:</label>
-        <input type="file" name="รูปผู้จอง">
-    </fieldset><br>
-
-    <fieldset>
-        <legend>ข้อมูลผู้เข้าสู่ระบบ</legend>
-        <label for="Username">Username:</label><br>
-        <input type="text" 
-                name="Username" 
-                pattern="[A-Za-z0-9_]*8"><br>
-        <i>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ตั้งเเต่ 8 ตัวขึ้นไป</i><br><br>      
-
-        
-        <label for="Password">Password:</label><br>
-        <input type="text"><br>
-        <i>ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i>
-       
-        
-
-     </fieldset>
+    
         
 
 
