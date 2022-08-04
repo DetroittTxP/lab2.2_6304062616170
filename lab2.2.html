@@ -31,7 +31,7 @@
             <textarea name="ที่อยู่:" id="" cols="30" rows="5" required></textarea><br>
     
             <label for="รหัสไปรณษีย์">รหัสไปรณษีย์:</label>
-            <input type="text" name="รหัสไปรณษีย์" size="5" maxlength="5" required><br>
+            <input type="text" name="รหัสไปรณษีย์" size="5" maxlength="5" pattern="[0-9]" required ><br>
             
             <label for="รูปผู้จอง">รูปผู้จอง:</label>
             <input type="file" name="รูปผู้จอง" required>
@@ -42,12 +42,13 @@
             <label for="Username">Username:</label><br>
             <input type="text" 
                     name="Username" 
-                    pattern="[A-Za-z0-9_]*8"><br>
+                    pattern="[A-Za-z0-9_]*8"
+                    required><br>
             <i>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ตั้งเเต่ 8 ตัวขึ้นไป</i><br><br>      
     
             
             <label for="Password">Password:</label><br>
-            <input type="password" pattern=".{8,}"><br>
+            <input type="password" pattern=".{8,}" required><br>
             <i>ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i>
     
          </fieldset><br>
@@ -55,7 +56,7 @@
          <fieldset>
             <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
             <label for="เเพคเก็จทัวร์">เเพคเก็จทัวร์:</label>
-            <select name="เเพคเก็จทัวร์">
+            <select required name="เเพคเก็จทัวร์">
                 <option value="">--select--</option>
                 <option value="JP">เเพคเก็จทัวร์ประเทศญี่ปุ่น</option>
                 <option value="ENG">เเพคเก็จทัวร์ประเทศอังกฤษ</option>
@@ -63,9 +64,9 @@
             </select><br>
 
             <label for="วันที่">วันทีเดินทาง:</label>
-            <input type="date" name="วันทีเดินทาง"><br>
+            <input type="date" name="วันทีเดินทาง" required><br>
             <label for="จำนวนผู้เดินทาง">จำนวนผู้เดินทาง:</label>
-            <input type="text" name="" maxlength="2" pattern="[1-9]"><br>
+            <input type="text" name="" maxlength="2" pattern="[1-9]" required><br>
             <label for="เน้นการท่องเที่ยว">เน้นการท่องเที่ยวเเบบใด?</label><br>
             <input type="checkbox"> ชอปปิ้ง <br>
             <input type="checkbox"> ธรรมชาติ <br>
@@ -73,9 +74,9 @@
          </fieldset><br>
 
          ยอมรับเงื่อนไขเเละข้อตกลง
-         <input type="radio" name="AGREE" id="AGREE">I agree
-         <input type="radio" name="AGREE" id="AGREE">I disagree 
-         &nbsp;<input type="button" value="จอง">
+         <input type="radio" name="AGREE" id="AGREE" required>I agree
+         <input type="radio" name="AGREE" id="AGREE" required>I disagree 
+         &nbsp;<input type="button" value="จอง" >
     
          
     </fieldset>   
